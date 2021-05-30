@@ -7,10 +7,8 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
-<h1>Vítejte na mém blogu</h1>
-<div>Níže najdete seznam mých příspěvků z imaginárního cestování uskutečněného v květnu 2021, které proběhlo
-    díky covidu jen v mých představách ...
-</div>
+<h1>Článek na téma:</h1>
+<a href="/slug" th:each="posty : ${posty}" th:href="@{/{slug}(slug=${posty.slug})}">
 <div th:each="posty : ${posty}">
     <div>
         <h2 th:utext="${posty.title}">Nadpis článku</h2>
