@@ -21,6 +21,9 @@
         <div th:utext="${posty.body}">Zbytek textu</div>
         <div th:utext="${posty.published}">Datum publikování</div>
     </div>
+    <div>
+        <a href="post/prispevek-1" th:href="@{/post/{slug}(slug=${posty.slug})}" class="button">Přečíst</a>
+    </div>
 </div>
 </body>
 </html>

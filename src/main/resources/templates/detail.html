@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Článek na téma:</h1>
-<a href="/slug" th:each="posty : ${posty}" th:href="@{/{slug}(slug=${posty.slug})}">
+<!--<a href="/post/slug" th:each="posty : ${posty}" th:href="@{{post/slug}(slug=${posty.slug})}"></a>-->
 <div th:each="posty : ${posty}">
     <div>
         <h2 th:utext="${posty.title}">Nadpis článku</h2>
@@ -18,6 +18,9 @@
         <div th:utext="${posty.perex}">První odstavec</div>
         <div th:utext="${posty.body}">Zbytek textu</div>
         <div th:utext="${posty.published}">Datum publikování</div>
+    </div>
+    <div>
+        <a th:href="@{/}" class="button">Zpět na seznam článků</a>
     </div>
 </div>
 </body>
